@@ -48,9 +48,22 @@ my_app.get('/api/courses/maths/:tema', (req, res) => {
 });
 
 // Usando más de un parámetro:
-my_app.get('api/courses/programm/:lenguaje/:nivel', (req, res) => {
+my_app.get('/api/courses/programm/:lenguaje/:nivel', (req, res) => {
+	console.log('two params');
+
 	const lang = req.params.lenguaje;
 	const level = req.params.nivel;
+
+	console.log(lang);
+	console.log(level);
+
+	const resultados = infoCourses.programm.filter(curso => curso.lang === lang && curso.level === level);
+
+	if(resultados.length === 0){
+		return res.status(404).send(`No se encontraron cursos de ${lang} con nivel ${level}`);
+	}
+
+	res.send(JSON.stringify(resultados));
 });
 
 
