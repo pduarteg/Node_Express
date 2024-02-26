@@ -11,13 +11,20 @@ let infoCourses = {
 			id: 2,
 			title: 'Python Intermedio',
 			lang: 'python',
-			views: 150000,
+			views: 45400,
 			level: 'intermediate'
 		},
 		{
 			id: 3,
 			title: 'Aprende JavaScript',
 			lang: 'javascript',
+			views: 14700,
+			level: 'basic'
+		},
+		{
+			id: 4,
+			title: 'Mejor usa python',
+			lang: 'python',
 			views: 14700,
 			level: 'basic'
 		}
