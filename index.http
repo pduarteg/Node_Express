@@ -1,0 +1,41 @@
+# Solicitud post usando el complemento
+# REST api de SublimeText3
+
+POST http://localhost:3000/api/courses/programm/
+Content-Type: application/json
+
+{
+	"id": 5,
+	"title": "Aprende C#",
+	"lang": "c#",
+	"views": 7800,
+	"level": "intermediate"
+}
+
+###
+
+PUT http://localhost:3000/api/courses/programm/6
+Content-Type: application/json
+
+{
+	"id": 6,
+	"title": "NUEVO",
+	"lang": "c++",
+	"views": 8000,
+	"level": "intermediate"
+}
+
+###
+
+PATCH http://localhost:3000/api/courses/programm/2
+Content-Type: application/json
+
+{
+	"title": "CURSO PARCHADO",
+	"views": 1000
+}
+
+###
+
+DELETE http://localhost:3000/api/courses/programm/1
+Content-Type: application/json
